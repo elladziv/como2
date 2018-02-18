@@ -1,0 +1,205 @@
+/* ////////////////////////////////////////////////////////// */
+/* HEADER */
+header {
+  display: block;
+  position: fixed;
+  right: 0px;
+  top: 1em;
+  width: 30.73%;
+  height: 0px;
+  padding-top: 7.03%;
+  z-index: 9999;
+
+  .header-bg {
+    display: block;
+    position: absolute;
+    top: -4%;
+    right: 0px;
+    width: 105.25%;
+    height: 0px;
+    padding-top: 33.39%;
+    background-image: url('~Images/header-bg.png');
+    background-position: right top;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+  }
+
+  .clock {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 40%;
+    height: 100%;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 5%;
+      width: 1px;
+      height: 90%;
+      background-color: rgba(255,255,255,.25);
+
+      -webkit-transition: all 500ms ease-in-out;
+      -moz-transition: all 500ms ease-in-out;
+      -ms-transition: all 500ms ease-in-out;
+      -o-transition: all 500ms ease-in-out;
+      transition: all 500ms ease-in-out;
+    }
+
+    .clock-icon {
+      display: block;
+      position: absolute;
+      left: 14%;
+      top: 50%;
+      width: 34.33%;
+      height: 0px;
+      padding-top: 34.33%;
+      background-image: url('~Images/clock.png');
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    .clock-time {
+      display: block;
+      position: absolute;
+      left: 54%;
+      top: 50%;
+      width: auto;
+      height: auto;
+      font-size: 0.92em;
+      font-weight: normal;
+      line-height: 1em;
+      color: #fff;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+      &.centered {
+        left: 50%;
+        text-transform: uppercase;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      &.clock-live-icon {
+        width: 68%;
+        padding-top: 68%;
+        background-image: url('~Images/header-live-icon.png');
+        background-position: center;
+        background-size: contain;
+      }
+    }
+  }
+
+  .flag {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 60%;
+    height: 100%;
+
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0px;
+      top: 5%;
+      width: 1px;
+      height: 90%;
+      background-color: rgba(0,0,0,.25);
+
+      -webkit-transition: all 500ms ease-in-out;
+      -moz-transition: all 500ms ease-in-out;
+      -ms-transition: all 500ms ease-in-out;
+      -o-transition: all 500ms ease-in-out;
+      transition: all 500ms ease-in-out;
+    }
+
+    .flag-img {
+      display: block;
+      position: absolute;
+      left: 6%;
+      top: 50%;
+      width: 26%;
+      height: 0px;
+      padding-top: 26%;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    .flag-name {
+      display: block;
+      position: absolute;
+      left: 38%;
+      top: 50%;
+      width: 56%;
+      height: auto;
+      font-size: 1.167em;
+      font-weight: normal;
+      line-height: 1.2em;
+      color: #fff;
+      text-shadow: 0px 0px 2px rgba(0,0,0,.5);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+
+  /*&.vertical {
+    .header-bg {
+      -webkit-transform: translateX(57%);
+      -moz-transform: translateX(57%);
+      -ms-transform: translateX(57%);
+      -o-transform: translateX(57%);
+      transform: translateX(57%);
+    }
+
+    .flag {
+      opacity: 0;
+      -webkit-transform: translateX(60%);
+      -moz-transform: translateX(60%);
+      -ms-transform: translateX(60%);
+      -o-transform: translateX(60%);
+      transform: translateX(60%);
+    }
+
+    .clock:before, .flag:before {
+        opacity: 0;
+    }
+  }*/
+}

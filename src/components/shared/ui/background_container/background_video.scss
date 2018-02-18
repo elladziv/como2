@@ -1,0 +1,23 @@
+.bg-video {
+    display: block;
+    position: relative;
+
+    &.hidden {
+        opacity: 0;
+    }
+
+    .bg-video-vid {
+        display: block;
+        position: relative;
+    }
+
+    .bg-video-cover {
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+    }
+}

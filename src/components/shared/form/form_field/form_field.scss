@@ -1,0 +1,748 @@
+/* CHECKBOX */
+.fl-checkbox {
+  display: inline-block;
+  position: relative;
+  font-size: 1em;
+  line-height: 1.2em;
+  font-weight: normal;
+  cursor: pointer;
+  margin: 10px 0px;
+  color: $sp_text1;
+
+  &.disabled {
+    opacity: 0.5;
+    filter: gray;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    pointer-events: none;
+  }
+
+  &.readonly {
+    pointer-events: none;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-appearance: none;
+  }
+
+  .square {
+    display: inline-block;
+    position: relative;
+    width: 21px;
+    height: 21px;
+    border: none;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    vertical-align: middle;
+    background-color: #ccc;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 21px;
+      height: 21px;
+      background-color: #fff;
+      border: solid 1px #979797;
+      text-align: center;
+      vertical-align: middle;
+      padding: 4px;
+    }
+  }
+
+  &.narrow {
+    margin: 12px 0px;
+
+    .square {
+      margin-bottom: 0px;
+    }
+  }
+
+  &:hover {
+    color: #000;
+  }
+
+  &:hover .square {
+  }
+
+  &:hover .square:before, input:focus + .square:before {
+    border: none;
+    width: 19px;
+    height: 19px;
+    left: 1px;
+    top: 1px;
+  }
+
+  &.invert:hover .square:before, &.invert input:focus + .square:before {
+    width: 21px;
+    height: 21px;
+    border: solid 1px #ccc;
+    left: 0px;
+    top: 0px;
+  }
+
+  input:checked + .square:before {
+    content: "✓";
+    font-weight: bold;
+    background: none;
+    border: none;
+    width: 21px;
+    height: 21px;
+    left: 0px;
+    top: 0px;
+    font-size: 16px;
+    line-height: 1em;
+  }
+
+  &.invert input:checked + .square:before {
+    content: "✓";
+    font-weight: bold;
+    background: none;
+    border: solid 1px #979797;
+    color: $sp_yellow_link;
+    width: 21px;
+    height: 21px;
+    left: 0px;
+    top: 0px;
+    line-height: 1.1em;
+  }
+
+  br + span {
+    display: inline-block;
+    margin-left: 29px;
+    font-size: 0.85em;
+    color: $sp_text2;
+  }
+
+  .fl-field-container {
+    display: inline-block !important;
+    vertical-align: top;
+    margin-top: -6px !important;
+    margin-left: 10px;
+
+    input {
+      opacity: 1;
+      pointer-events: all;
+      min-width: 150px;
+    }
+  }
+  &.fl-bold {
+    font-weight: 500 !important;
+  }
+}
+.fl-form label.fl-checkbox {
+  color: $sp_text1;
+}
+.fl-checkbox-list .fl-checkbox {
+  margin-bottom: 0px;
+}
+
+/* TOGGLE BUTTON (CHECKBOX) */
+.fl-toggle {
+  display: inline-block;
+  position: relative;
+  font-size: 1em;
+  line-height: 1.2em;
+  font-weight: normal;
+  cursor: pointer;
+  margin: 10px 0px;
+
+  &.disabled {
+    opacity: 0.5;
+    filter: gray;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    pointer-events: none;
+  }
+
+  &.readonly {
+    pointer-events: none;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-appearance: none;
+  }
+
+  .square {
+    display: inline-block;
+    position: relative;
+    width: 34px;
+    height: 14px;
+    border: none;
+    border-radius: 7px;
+    background-color: #d6d6d6;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    vertical-align: middle;
+    -webkit-transition: all 150ms linear;
+    -moz-transition: all 150ms linear;
+    -ms-transition: all 150ms linear;
+    -o-transition: all 150ms linear;
+    transition: all 150ms linear;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      margin-top: -3px;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      background-color: #f2f2f2;
+      text-align: center;
+      vertical-align: middle;
+      padding: 4px;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+      -webkit-transition: all 150ms linear;
+      -moz-transition: all 150ms linear;
+      -ms-transition: all 150ms linear;
+      -o-transition: all 150ms linear;
+      transition: all 150ms linear;
+    }
+  }
+
+  &:hover {
+    color: #000;
+  }
+
+  &:hover .square {
+  }
+
+  &:hover .square, input:focus + .square {
+    background-color: #fde5a6;
+  }
+
+  input:checked + .square {
+    background-color: #fde5a6;
+  }
+
+  input:checked + .square:before {
+    left: 14px;
+    background-color: #ffce4b;
+  }
+
+  br + span {
+    display: inline-block;
+    margin-left: 42px;
+  }
+}
+
+/* GENERAL FORMS */
+.fl-form {
+  display: block;
+  position: relative;
+  .form-field {
+    margin-bottom: 12px;
+  }
+  .row.no-margins.form-field {
+    margin-bottom: 12px !important;
+  }
+  .form-control{
+    border-radius: 0px;
+  }
+  .input-group-addon{
+     background-color: transparent;
+     border-radius: 0px;
+  }
+  .fl-field-container {
+    display: block;
+    position: relative;
+    margin-top: 6px;
+  }
+  .form-group.inline{
+    label{
+      margin-top: 6px;
+      padding: 10px 0px;
+    }
+  }
+  .input-group{
+    width: 100%;
+    input{
+      border-right: none;
+    }
+
+  }
+  .fl-btn-input-group{
+    color: inherit;
+    background: transparent;
+    border: 1px solid #d2d2d2;
+    width: 41px;
+    height: 41px;
+    line-height: 1.2em;
+    font-size: 18px;
+    border-left: none;
+  }
+
+  a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    color: $sp_yellow;
+
+    &:hover, &:focus {
+      color: $sp_text2;
+      text-decoration: underline;
+    }
+  }
+  
+  label {
+    white-space: normal;
+    font-size: 16px;
+    line-height: 1.2em;
+    font-weight: 400;
+    color: #6d6e71;
+  }
+
+  label.inline, a.inline {
+    margin-top: 8px;
+  }
+
+  .field-tip {
+    font-size: 14px;
+    line-height: 1.5em;
+    margin-top: 4px;
+    color: $sp_text2;
+  }
+
+  .field-tip-error {
+    font-size: 14px;
+    line-height: 1.5em;
+    margin-top: 4px;
+    color: #ff4a4a;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    height: auto;
+    line-height: 1.2em;
+    padding: 10px 14px;
+    border: solid 1px #d2d2d2;
+    vertical-align: top;
+    font-size: 16px;
+    background-color: transparent;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  select{
+    text-transform: capitalize;
+  }
+
+  input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+  }
+
+  input[type="radio"] {
+    -webkit-appearance: radio;
+  }
+
+  input[disabled], select[disabled], textarea[disabled]{
+    background-color: $sp_bg_gray;
+    border: solid 1px $sp_bg_gray;
+  }
+
+  input:focus, select:focus, textarea:focus, div:focus{
+    outline: none;
+    box-shadow: 0px 0px 6px $sp_yellow_hover;
+  }
+
+  textarea {
+    min-height: 116px;
+    resize: none;
+  }
+
+  .textarea-counter {
+    display: block;
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    font-size: 0.875em;
+    background-color: rgba(255,255,255,.5);
+    padding: 0px 3px;
+  }
+
+  .textarea-title {
+    height: 60px;
+    min-height: 60px;
+    padding: 16px 14px;
+    font-family: Georgia;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .fl-field-currency {
+    input {
+      padding-left: 26px;
+    }
+
+    .fl-field-prefix {
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: auto;
+      height: 100%;
+      padding: 9px 14px;
+      font-size: 1.2em;
+      pointer-events: none;
+    }
+  }
+
+  select{
+    height: 41px;
+
+    &.no-border {
+      border: none;
+    }
+
+    &.no-background {
+      background-color: transparent;
+    }
+
+    &.select-tall {
+      height: 60px;
+
+      &.fl-select-arrow {
+        background-position: calc(100% - 20px) calc(1em + 12px), calc(100% - 15px) calc(1em + 12px), 100% 0;
+      }
+    }
+  }
+
+  .err * {
+    border-color: #ff4a4a !important;
+    color: #ff4a4a;
+  }
+  
+  a:focus {
+    outline: none;
+  }
+
+  .input-group.disabled{
+    .btn{
+      background-color: $sp_bg_gray;
+      border: solid 1px $sp_bg_gray;
+      cursor: default;
+    }
+  }
+
+  .fl-field-counter {
+    max-width: 160px;
+
+    input {
+      padding-right: 94px;
+    }
+
+    .counter-suffix {
+      display: block;
+      position: absolute;
+      left: 35px;
+      top: 9px;
+    }
+
+    .counter-bt {
+      display: block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      width: 41px;
+      height: 41px;
+      border: solid 1px $sp_lines;
+      font-size: 20px;
+      font-weight: 600;
+      color: $sp_text2;
+      cursor: pointer;
+      text-align: center;
+      vertical-align: center;
+      padding-top: 7px;
+
+      &.counter-minus {
+        right: 40px;
+      }
+
+      &:focus, &:hover {
+        background-color: $sp_bg_hover;
+      }
+
+      &:active {
+        /*background-color: $sp_yellow;*/
+      }
+    }
+  }
+
+  .fl-field-list {
+    display: block;
+    position: relative;
+    border: solid 1px $sp_lines;
+
+    label {
+      display: block;
+      position: relative;
+      border-top: solid 1px $sp_lines;
+      cursor: pointer;
+      min-height: 60px;
+      padding: 0px;
+      margin: 0px;
+
+      &:first-of-type{
+        border: none;
+      }
+
+      input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+      }
+
+      .fl-field-list-option {
+        display: block;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        padding: 20px 16px;
+        font-size: 16px;
+        line-height: 1.2em;
+        z-index: 1;
+
+        div {
+          margin-right: 30px;
+
+          span{
+            color: $fl-text1 ;
+          }
+        }
+
+        &:hover {
+          background-color: $sp_bg_gray;
+        }
+      }
+
+      input[type="radio"]:focus + .fl-field-list-option {
+        background-color: $sp_bg_gray;
+      }
+
+      input[type="radio"]:checked + .fl-field-list-option {
+        background-color: $fl-calendar-tentative;
+
+        &:after {
+          content: "\e930";
+          display: block;
+          position: absolute;
+          right: 20px;
+          top: 22px;
+          font-family: 'spicomoon';
+          font-size: 16px;
+          color: $sp_text2;
+        }
+      }
+    }
+  }
+
+  hr {
+    margin: 45px 0px 20px;
+    border-top: 1px solid $sp_lines;
+  }
+
+  .form-error {
+    color: #ff4a4a;
+    margin-top: 35px;
+  }
+
+  .form-error + hr {
+      margin: 5px 0px 20px;
+  }
+
+  section {
+    display: block;
+    position: relative;
+    text-align: left;
+
+    h2 {
+      display: block;
+      position: relative;
+      padding: 18px 0px;
+      font-family: ProximaNova;
+      font-size: 24px;
+      line-height: 1;
+      color: #262629;
+      font-weight: 400;
+      margin: 38px 0px;
+    }
+
+    h3 {
+      display: block;
+      position: relative;
+      padding: 18px 0px;
+      font-family: ProximaNova;
+      font-size: 24px;
+      line-height: 1;
+      color: #262629;
+      font-weight: 400;
+      margin: 38px 0px 0px;
+    }
+  }
+}
+
+.fl-field-container.mobile-icon {
+  .fl-icon {
+    display: none;
+  }
+}
+
+.radio-inline input[type=radio] {
+    width: initial;
+  height: 18px;
+  }
+.radio-inline span{
+  vertical-align: middle;
+}
+
+
+
+@media (max-width: 767px) {
+  /* CHECKBOX */
+  .fl-checkbox {
+    margin: 12px 0px;
+
+    .square {
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+      margin-bottom: 4px;
+
+      &:before {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    &.narrow {
+      margin: 14px 0px;
+
+      .square {
+        margin-bottom: 0px;
+      }
+    }
+
+    &:hover .square:before, input:focus + .square:before {
+      width: 26px;
+      height: 26px;
+      left: 1px;
+      top: 1px;
+    }
+
+    &.invert:hover .square:before, &.invert input:focus + .square:before {
+      width: 28px;
+      height: 28px;
+    }
+
+    input:checked + .square:before {
+      width: 28px;
+      height: 28px;
+      font-size: 22px;
+      line-height: 1em;
+    }
+
+    &.invert input:checked + .square:before {
+      width: 28px;
+      height: 28px;
+    }
+
+    br + span {
+      margin-left: 36px;
+    }
+  }
+
+  .fl-form {
+    input, select {
+      height: 60px;
+
+      &.fl-select-arrow {
+        background-position: calc(100% - 20px) calc(1em + 12px), calc(100% - 15px) calc(1em + 12px), 100% 0;
+      }
+    }
+    .fl-btn-input-group{
+      height: 60px;
+    }
+    textarea {
+      height: 120px;
+    }
+
+    .fl-field-counter {
+      max-width: 100%;
+
+      input {
+        padding-right: 132px;
+      }
+
+      .counter-suffix {
+        top: 20px;
+      }
+
+      .counter-bt {
+        width: 60px;
+        height: 60px;
+        font-size: 32px;
+        padding-top: 10px;
+
+        &.counter-minus {
+          right: 59px;
+          padding-top: 8px;
+        }
+      }
+
+
+    }
+
+    .fl-field-currency {
+      .fl-field-prefix {
+        padding: 19px 14px;
+      }
+    }
+
+    .form-group.inline{
+      label{
+        padding: 0px 0px;
+      }
+    }
+  }
+
+  .fl-field-container.mobile-icon {
+      cursor: pointer;
+
+      * {
+        opacity: 0;
+      }
+
+      .fl-icon {
+        opacity: 1;
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 6px;
+        font-size: 2em;
+        pointer-events: none;
+      }
+  }
+
+  .fl-form .textarea-title {
+    font-size: 18px;
+    line-height: 1.2em;
+    height: 80px;
+  }
+}

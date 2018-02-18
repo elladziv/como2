@@ -1,0 +1,15 @@
+.progress-bar-bg {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 10px;
+	background-color: #f2f2f2;
+
+	.progress-bar {
+		display: block;
+		position: relative;
+		height: 10px;
+		background-color: $specialColor;
+		box-shadow: none;
+	}
+}

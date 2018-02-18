@@ -1,0 +1,293 @@
+/* * */
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  font-size: 100%;
+  font-family: Tahoma, sans-serif;
+  font-size: 24px;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  background-color: #000000;
+}
+
+body {
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #000000;
+  font-size: 24px;
+  font-weight: normal;
+  color: #ffffff;
+  line-height: 1.2em;
+  font-family: Tahoma, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: subpixel-antialiased;
+  font-smooth: always;
+  text-rendering: optimizeLegibility;
+  text-shadow: 0 0 0 transparent;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+input, textarea, select, select option {
+  font-family: Tahoma, sans-serif;
+}
+
+article, aside, figure, footer, header, nav, section { 
+  display: block; 
+}
+ul, ol, dl {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+div, img, figure {
+  display: block;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a, a:hover, a:active, a:focus {
+  outline: 0;
+}
+
+img {
+  display: block;
+  border: none;
+    background: transparent;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE8 */   
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);   /* IE6 & 7 */      
+    zoom: 1;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+::selection {
+  background-color: #f90eb9;
+}
+
+::-moz-selection {
+  background-color: #f90eb9;
+}
+
+::-webkit-selection {
+  background-color: #f90eb9;
+}
+
+.inanimate, .inanimate * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+.overflow {
+  height: auto;
+  overflow: hidden;
+}
+
+.center {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0px auto;
+}
+
+.vcenter {
+  display: block;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  -webkit-transform: translate(50%,-50%);
+  -moz-transform: translate(50%,-50%);
+  -ms-transform: translate(50%,-50%);
+  -o-transform: translate(50%,-50%);
+  transform: translate(50%,-50%);
+}
+
+.hidden {
+  display: none !important;
+}
+
+hr, .hr {
+  display: block;
+  position: relative;
+  width: auto;
+  height: 1px;
+  margin: 0px 1em;
+  border: none;
+  background-color: #d8d8d8;
+}
+
+/* ////////////////////////////////////////////////////////// */
+/* CONSTRUCTION */
+#wrapper {
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+
+  #page {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    min-height: 100%;
+  }
+}
+
+.app, .pages {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ////////////////////////////////////////////////////////// */
+/* FOOTER */
+footer {
+  .como-logo {
+    display: block;
+    position: fixed;
+    right: 2.5vw;
+    bottom: 2.5vh;
+    width: 10.15vw;
+    height: 2.55vw;
+    background-image: url('~Images/como.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+#footer-placeholder {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* //////////////////////////////////////////////////////////////////// */
+/* EXTRA BIG */
+@media (min-width: 1921px) {
+
+}
+
+/* //////////////////////////////////////////////////////////////////// */
+/* MEDIUM */
+/* 1600 */
+@media (max-width: 1700px) {
+
+  html, body {
+    font-size: 24px;
+  }
+
+  .center {
+
+  }
+
+}
+
+/* 1280 */
+@media (max-width: 1450px) {
+
+  html, body {
+    font-size: 22px;
+  }
+
+  .center {
+
+  }
+
+}
+
+/* 1024 */
+@media (max-width: 1200px) {
+
+  html, body {
+    font-size: 18px;
+  }
+
+  .center {
+
+  }
+}
+
+@media (max-width: 990px) {
+
+  html, body {
+    font-size: 16px;
+  }
+
+  .center {
+
+  }
+}
+
+/* //////////////////////////////////////////////////////////////////// */
+/* MOBILE */
+.mobile-hide {
+}
+
+.mobile-show {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+
+  .mobile-hide {
+    display: none !important;
+  }
+
+  .mobile-show {
+    display: block !important;
+  }
+
+  html, body {
+    font-size: 24px;
+  }
+
+  .center {
+
+  }
+
+}
